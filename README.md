@@ -52,5 +52,5 @@ Analyze the results from each query to identify key patterns, such as attack fre
 The Word file contains detailed explanations of each query, the metrics involved, and how each query contributes to the overall analysis.
 
 ## Data Files
-The dataset used in this project (CICIDS 2017) is available in CSV format. The CSV files can be accessed from the provided S3 bucket or downloaded and uploaded to Amazon Redshift manually.
+The dataset used in this project (CICIDS 2017) is available in CSV format. The CSV files can be accessed fromshould be accessible from the Google Drive link provided in the Data.md file.
 
