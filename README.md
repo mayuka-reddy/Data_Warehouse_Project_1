@@ -38,9 +38,9 @@ The project schema includes the following tables:
 - **fact_table**: This central table links all dimension tables and contains network event data, such as attack labels, source and destination information, and protocol details with a distkey and sortkey.
 
 This project uses two sets of table definitions:
-### Dimension and Fact Tables:
+**Dimension and Fact Tables**:
 For detailed code on creating the dimension and fact tables, please refer to the REDSHIFT CODE DOCX file.
-### Tables with Distribution and Sort Keys:
+**Tables with Distribution and Sort Keys**:
 For table definitions with optimized distribution and sort keys, refer to the REDSHIFT CODE 2 DOCX file.
 
 ## SQL Queries in the Word Document
@@ -58,13 +58,13 @@ The attached Word file contains a set of SQL queries that are designed to analyz
 
 ## Query Results
 Each query was executed on both versions of the table schema (with and without distribution and sort keys). The results of these queries are available in two separate files:
-### Query Results 1: Contains output from queries executed on the initial tables (without distribution and sort key optimizations).
-### Query Results 2: Contains output from queries executed on the optimized tables (with distribution and sort keys applied)
+**Query Results 1**: Contains output from queries executed on the initial tables (without distribution and sort key optimizations).
+**Query Results 2**: Contains output from queries executed on the optimized tables (with distribution and sort keys applied)
 
 ## Query Performance Comparison
 To evaluate the impact of distribution and sort keys on query performance, we included screenshots showing the query execution times for each table setup:
-### Query Performance 1: Shows query execution times for the initial tables (without distribution and sort keys).
-### Query Performance 2: Shows query execution times for the optimized tables (with distribution and sort keys).
+**Query Performance 1**: Shows query execution times for the initial tables (without distribution and sort keys).
+**Query Performance 2**: Shows query execution times for the optimized tables (with distribution and sort keys).
 These files provide a visual comparison of performance differences between the two table configurations, highlighting the benefits of using distribution and sort keys in Amazon Redshift.
 
 ## How to Use This Repository
