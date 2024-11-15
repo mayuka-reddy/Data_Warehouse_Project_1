@@ -1,7 +1,7 @@
 # Data Warehouse Project 1
 
 ## Project Description
-This project involves using Amazon Redshift as a data warehouse to analyze the **CICIDS 2017 dataset**, a benchmark dataset for intrusion detection. The project implements a **star schema** data model, which optimizes query performance and scalability. By running and analyzing eight complex queries, I explored Redshift-specific optimizations, such as **distribution and sort keys**, to understand how they impact query efficiency, performance, and data storage.
+This project involves using Amazon Redshift as a data warehouse to analyze the **CICIDS 2017 dataset**, a benchmark dataset for intrusion detection. The project implements a **star schema** data model, which optimizes query performance and scalability. By running and analyzing ten complex queries, I explored Redshift-specific optimizations, such as **distribution and sort keys**, to understand how they impact query efficiency, performance, and data storage.
 
 ## Objectives
 1. Download the **CICIDS 2017 dataset** and perform data preprocessing.
@@ -25,6 +25,24 @@ The project schema includes the following tables:
 ### Fact Table:
 - **fact_table**: This central table links all dimension tables and contains network event data, such as attack labels, source and destination information, and protocol details.
 
+## Dimension Tables with Distribution and Sort Keys:
+- **sourc_dim_dist**: Contains details about the source IP and port with a distkey and sortkey.
+- **dest_dim_dist**: Contains details about the destination IP and port with a distkey and sortkey.
+- **protocol_dim_dist**: Describes network protocols (e.g., TCP, UDP) with a distkey and sortkey.
+- **packet_dim_dist**: Holds packet-level data, such as packet size, length, and statistics with a distkey and sortkey.
+- **flag_dim_dist**: Holds information about network flags (e.g., SYN, FIN, ACK) with a distkey and sortkey.
+- **date_dim_dist**: Contains timestamp data, which is used for temporal analysis with a distkey and sortkey.
+- **flow_dim_dist**: Contains detailed flow metrics (e.g., flow duration, bytes per second) with a distkey and sortkey.
+
+### Fact Table with Distribution and Sort Key:
+- **fact_table**: This central table links all dimension tables and contains network event data, such as attack labels, source and destination information, and protocol details with a distkey and sortkey.
+
+This project uses two sets of table definitions:
+### Dimension and Fact Tables:
+For detailed code on creating the dimension and fact tables, please refer to the REDSHIFT CODE DOCX file.
+### Tables with Distribution and Sort Keys:
+For table definitions with optimized distribution and sort keys, refer to the REDSHIFT CODE 2 DOCX file.
+
 ## SQL Queries in the Word Document
 The attached Word file contains a set of SQL queries that are designed to analyze the data in the aforementioned tables. Each query serves a specific analytical purpose and is explained in detail. Here's a summary of the types of analysis the queries perform:
 1. **FTP-Patator Attack Frequency**: Identifies the frequency of FTP-Patator attacks by source IP and port.
@@ -36,6 +54,18 @@ The attached Word file contains a set of SQL queries that are designed to analyz
 7. **Top Packets Forwarded by Source and Protocol**: Retrieves the top packets forwarded by source IP and protocol.
 8. **Packet Size Spike Detection**: Detects spikes in packet sizes by source IP based on previous entries.
 9. **High Flag Count Combinations**: Identifies source and destination combinations with high flag counts, suggesting potential attack behavior.
+10. **Anomaly Detection in Network Traffic Using Flag Count and Hourly Analysis**: Identifies potential network traffic anomalies by analyzing high flag counts and packet lengths for TCP/UDP protocols, grouped by source IP, destination IP, protocol, and hour.
+
+## Query Results
+Each query was executed on both versions of the table schema (with and without distribution and sort keys). The results of these queries are available in two separate files:
+### Query Results 1: Contains output from queries executed on the initial tables (without distribution and sort key optimizations).
+### Query Results 2: Contains output from queries executed on the optimized tables (with distribution and sort keys applied)
+
+## Query Performance Comparison
+To evaluate the impact of distribution and sort keys on query performance, we included screenshots showing the query execution times for each table setup:
+### Query Performance 1: Shows query execution times for the initial tables (without distribution and sort keys).
+### Query Performance 2: Shows query execution times for the optimized tables (with distribution and sort keys).
+These files provide a visual comparison of performance differences between the two table configurations, highlighting the benefits of using distribution and sort keys in Amazon Redshift.
 
 ## How to Use This Repository
 
