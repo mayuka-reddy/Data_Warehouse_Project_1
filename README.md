@@ -58,8 +58,8 @@ The attached Word file contains a set of SQL queries that are designed to analyz
 
 ## Query Results
 Each query was executed on both versions of the table schema (with and without distribution and sort keys). The results of these queries are available in two separate files:
-- **Query Results 1**: Contains output from queries executed on the initial tables (without distribution and sort key optimizations).
-- **Query Results 2**: Contains output from queries executed on the optimized tables (with distribution and sort keys applied)
+- **Queries Results 1**: Contains output from queries executed on the initial tables (without distribution and sort key optimizations).
+- **Queries Results 2**: Contains output from queries executed on the optimized tables (with distribution and sort keys applied)
 
 ## Query Performance Comparison
 To evaluate the impact of distribution and sort keys on query performance, we included screenshots showing the query execution times for each table setup:
