@@ -86,6 +86,23 @@ Analyze the results from each query to identify key patterns, such as attack fre
 ### Step 4: Reference Word Document
 The Word file contains detailed explanations of each query, the metrics involved, and how each query contributes to the overall analysis.
 
+## **Query Performance Comparison**
+
+The following table compares the execution times for the 10 queries when run on tables with and without distribution and sort keys:
+
+| **Query**                                             | **Execution Time (Without Distribution and Sort Keys)** | **Execution Time (With Distribution and Sort Keys)** |
+|-------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------|
+| **1. FTP-Patator Attack Frequency**                   | 286 ms                                                  | 55 ms                                                |
+| **2. Top Source IPs by Event Count**                  | 850 ms                                                  | 1000 ms                                              |
+| **3. Average Packet Size**                            | 4000 ms                                                 | 368 ms                                               |
+| **4. Hourly Distribution of Traffic**                 | 5000 ms                                                 | 407 ms                                               |
+| **5. Top Destination IPs**                            | 473 ms                                                  | 489 ms                                               |
+| **6. Total Packets Forwarded by Source and Protocol** | 5000 ms                                                 | 415 ms                                               |
+| **7. Top Packets Forwarded by Source and Protocol**   | 621 ms                                                  | 405 ms                                               |
+| **8. Packet Size Spike Detection**                    | 5000 ms                                                 | 2000 ms                                              |
+| **9. High Flag Count Combinations**                   | 744 ms                                                  | 599 ms                                               |
+| **10. Anomaly Detection in Network Traffic**          | 5000 ms                                                 | 1000ms                                               |
+
 ## Data Files
 The dataset used in this project (CICIDS 2017) is available in CSV format. The CSV files can be accessed fromshould be accessible from the Google Drive link provided in the Data.md file.
 
