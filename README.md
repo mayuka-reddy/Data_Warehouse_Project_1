@@ -1,7 +1,7 @@
-# Data Warehouse Project 1
+# Data Warehouse Project 1: Intrusion Detection Analysis
 
 ## Project Description
-This project involves using Amazon Redshift as a data warehouse to analyze the **CICIDS 2017 dataset**, a benchmark dataset for intrusion detection. The project implements a **star schema** data model, which optimizes query performance and scalability. By running and analyzing ten complex queries, I explored Redshift-specific optimizations, such as **distribution and sort keys**, to understand how they impact query efficiency, performance, and data storage.
+This project involves using Amazon Redshift as a data warehouse to analyze the **CICIDS 2017 dataset**, a benchmark dataset for intrusion detection. The project implements a **star schema** data model, which optimizes query performance and scalability. By running and analyzing ten complex queries, I explored Redshift-specific optimizations, such as **distribution and sort keys**, to understand how they impact query efficiency, performance, and also provided some the issues we faced and how i Overcome those issues.
 
 ## Objectives
 1. Download the **CICIDS 2017 dataset** and perform data preprocessing.
@@ -42,6 +42,11 @@ This project uses two sets of table definitions:
 For detailed code on creating the dimension and fact tables, please refer to the REDSHIFT CODE DOCX file.
 - **Tables with Distribution and Sort Keys**:
 For table definitions with optimized distribution and sort keys, refer to the REDSHIFT CODE 2 DOCX file.
+
+## Star Schema
+<img width="903" alt="Star Schema for the Project" src="https://github.com/user-attachments/assets/882c1a3d-89e1-4004-9e26-85f28ed68b40">
+
+
 
 ## SQL Queries in the Word Document
 The attached Word file contains a set of SQL queries that are designed to analyze the data in the aforementioned tables. Each query serves a specific analytical purpose and is explained in detail. Here's a summary of the types of analysis the queries perform:
