@@ -84,3 +84,26 @@ The Word file contains detailed explanations of each query, the metrics involved
 ## Data Files
 The dataset used in this project (CICIDS 2017) is available in CSV format. The CSV files can be accessed fromshould be accessible from the Google Drive link provided in the Data.md file.
 
+## Challenges and Solutions:
+### 1. Surrogate Key Mapping in ETL
+#### Problem: 
+Mapping surrogate keys to large dimension tables like flow and packet caused overhead due to their size and complexity.
+#### Details:
+Initially, a mapping function was used, but it was slow and inefficient for high-volume data.
+Hash-based mapping was introduced to reduce overhead.
+Additional Challenge: Inconsistent hash values between the dimension and fact tables due to data type differences (int vs. float).
+#### Solution:
+Standardized data types across all relevant attributes to ensure consistent hashing.
+### 2. Cluster Availability
+#### Problem: 
+Redshift clusters were intermittently unavailable, requiring cluster recreation.
+#### Details:
+This issue disrupted workflows and consumed significant time.
+#### Solution:
+Switching the cluster's location from Virginia to California resolved the problem. Geographical cluster placement can impact availability and stability.
+### 3. File Upload Failures
+#### Problem: 
+Some files failed to upload consistently, irrespective of file size.
+#### Solution:
+Retried uploading multiple times, which succeeded eventually.
+
