@@ -1,7 +1,7 @@
 # Data Warehouse Project 1: Intrusion Detection Analysis using Redshift
 
 ## Project Description
-This project involves using Amazon Redshift as a data warehouse to analyze the **CICIDS 2017 dataset**, a benchmark dataset for intrusion detection. The project implements a **star schema** data model, which optimizes query performance and scalability. By running and analyzing ten complex queries, I explored Redshift-specific optimizations, such as **distribution and sort keys**, to understand how they impact query efficiency, performance, and also provided some the issues we faced and how i Overcome those issues.
+This project involves using Amazon Redshift as a data warehouse to analyze the **CICIDS 2017 dataset**, a benchmark dataset for intrusion detection. The project implements a **star schema** data model, which optimizes query performance and scalability. By running and analyzing ten complex queries, we explored Redshift-specific optimizations, such as **distribution and sort keys**, to understand how they can impact query performance, and also mentioned some the issues we faced when working on this project and how we overcame it.
 
 ## Objectives
 1. Download the **CICIDS 2017 dataset** and perform data preprocessing.
